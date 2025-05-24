@@ -99,13 +99,12 @@ Flags:
 - `--profile` - DBT profile to use
 - `--target` - DBT target to use
 - `--schemas` - Specific schemas to check for stale models
-- `--dry-run` - Run without making changes
 - `--print` - Print DBT logs
 - `--config` - Path to the config file
 
 Example:
 ```bash
-dts gen drop-stale-models --schemas staging,intermediate --dry-run
+dts gen drop-stale-models --schemas staging,intermediate
 ```
 
 #### Snowflake Key Pair
@@ -123,6 +122,25 @@ Flags:
 Example:
 ```bash
 dts gen snowflake-key-pair john_smith --passphrase my_secure_passphrase
+```
+
+#### Lineage Tree
+
+Generate lineage tree for a dbt model.
+
+```bash
+dts gen lineage-tree [model] [flags]
+```
+
+Flags:
+- `--target` - DBT target to use
+- `--compile` - Whether to compile or not (default is false)
+- `--print` - Print DBT logs
+- `--config` - Path to the DTS config file
+
+Example:
+```bash
+dts gen lineage-tree my_model --target prod --compile
 ```
 
 ### mcp
