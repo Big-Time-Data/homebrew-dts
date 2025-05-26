@@ -5,20 +5,20 @@
 class Dts < Formula
   desc "This is a CLI application integrated with DBT (Data Build Tool) focused on establishing robust testing for data models."
   homepage "https://bigtimedata.io/"
-  version "0.1.1"
+  version "0.2.0"
   depends_on :macos
 
   on_intel do
-    url "https://github.com/Big-Time-Data/homebrew-dts/releases/download/v0.1.1/dts_darwin_amd64.tar.gz"
-    sha256 "a76e3a3b2819b3512e622470126a98ca4cb1aca79ac4a4ea829708b5cf1f18eb"
+    url "https://github.com/Big-Time-Data/homebrew-dts/releases/download/v0.2.0/dts_darwin_amd64.tar.gz"
+    sha256 "bea14fc93f081f935df947e8450fa60a17c9d007b88c53b03d40921aeb5291d8"
 
     def install
       bin.install "dts"
     end
   end
   on_arm do
-    url "https://github.com/Big-Time-Data/homebrew-dts/releases/download/v0.1.1/dts_darwin_arm64.tar.gz"
-    sha256 "e01624ee2841b7f9d545953c9f152ff8bf50531ce326256a8ce9acdd721a8f85"
+    url "https://github.com/Big-Time-Data/homebrew-dts/releases/download/v0.2.0/dts_darwin_arm64.tar.gz"
+    sha256 "d8fab6fbd35becc3cf5845ebaedb94a46a4fd070266303b971cfef321102389b"
 
     def install
       bin.install "dts"
