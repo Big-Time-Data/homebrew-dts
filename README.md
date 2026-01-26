@@ -32,7 +32,11 @@ Then open http://localhost:8080 in your browser.
 After installing DTS, set up the Claude Code plugin:
 
 ```bash
-claude plugin install "$(brew --caskroom)/dts/latest/"
+# Add the marketplace
+claude plugin marketplace add Big-Time-Data/homebrew-dts
+
+# Install the plugin
+claude plugin install dts@dts-marketplace
 ```
 
 This enables Claude Code to interact with your dbt projects through MCP tools.

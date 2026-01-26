@@ -26,7 +26,8 @@ cask "dts" do
       dts
 
     Claude Plugin Setup:
-      claude plugin install /opt/homebrew/Caskroom/dts/latest/
+      claude plugin marketplace add Big-Time-Data/homebrew-dts
+      claude plugin install dts@dts-marketplace
 
     For the legacy CLI (v0.18.x):
       brew install Big-Time-Data/dts/dts-legacy
