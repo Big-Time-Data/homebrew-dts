@@ -3,7 +3,7 @@ cask "dts" do
   name "dts"
   desc "Data Tool Suite - Web IDE and MCP server for dbt projects"
   homepage "https://bigtimedata.io/"
-  version "2.1.0-new-ui.0"
+  version "2.2.0-new-ui.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,24 +14,24 @@ cask "dts" do
 
   on_macos do
     url "https://github.com/Big-Time-Data/homebrew-dts/releases/download/v#{version}/dts_darwin_all.tar.gz"
-    sha256 "276086e55a9efd7dca511e3a1794f63d64a0d67eaa38fe69d92a3298650ebcb2"
+    sha256 "421c04c79859f06a8fd0494d6f6b7a122e40eab071bbf5612ab52dafa24dcc28"
   end
 
-  caveats <<~EOS
-    DTS has been installed with:
-      - dts: Web IDE server
-      - dts_mcp: MCP server for Claude Code
-
-    To start the web IDE:
-      dts
-
-    Claude Plugin Setup:
-      claude plugin marketplace add Big-Time-Data/homebrew-dts
-      claude plugin install dts@dts-marketplace
-
-    For the legacy CLI (v0.18.x):
-      brew install Big-Time-Data/dts/dts-legacy
-  EOS
+  caveats do
+    "DTS has been installed with:"
+    "  - dts: Web IDE server"
+    "  - dts_mcp: MCP server for Claude Code"
+    ""
+    "To start the web IDE:"
+    "  dts"
+    ""
+    "Claude Plugin Setup:"
+    "  claude plugin marketplace add Big-Time-Data/homebrew-dts"
+    "  claude plugin install dts@dts-marketplace"
+    ""
+    "For the legacy CLI (v0.18.x):"
+    "  brew install Big-Time-Data/dts/dts-legacy"
+  end
 
   # No zap stanza required
 end
