@@ -17,20 +17,20 @@ cask "dts" do
     sha256 "276086e55a9efd7dca511e3a1794f63d64a0d67eaa38fe69d92a3298650ebcb2"
   end
 
-  caveats do
-    "DTS has been installed with:"
-    "  - dts: Web IDE server"
-    "  - dts_mcp: MCP server for Claude Code"
-    ""
-    "To start the web IDE:"
-    "  dts"
-    ""
-    "Claude Plugin Setup:"
-    "  claude plugin install "$(brew --caskroom)/dts/latest/""
-    ""
-    "For the legacy CLI (v0.18.x):"
-    "  brew install Big-Time-Data/dts/dts-legacy"
-  end
+  caveats <<~EOS
+    DTS has been installed with:
+      - dts: Web IDE server
+      - dts_mcp: MCP server for Claude Code
+
+    To start the web IDE:
+      dts
+
+    Claude Plugin Setup:
+      claude plugin install /opt/homebrew/Caskroom/dts/latest/
+
+    For the legacy CLI (v0.18.x):
+      brew install Big-Time-Data/dts/dts-legacy
+  EOS
 
   # No zap stanza required
 end
