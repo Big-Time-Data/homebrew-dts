@@ -12,6 +12,16 @@ cask "dts" do
   binary "dts"
   binary "dts_mcp"
 
+  postflight do
+    # Remove quarantine attribute from binaries
+    system_command "/usr/bin/xattr",
+                   args: ["-d", "com.apple.quarantine", "#{staged_path}/dts"],
+                   sudo: false
+    system_command "/usr/bin/xattr",
+                   args: ["-d", "com.apple.quarantine", "#{staged_path}/dts_mcp"],
+                   sudo: false
+  end
+
   on_macos do
     url "https://github.com/Big-Time-Data/homebrew-dts/releases/download/v#{version}/dts_darwin_all.tar.gz"
     sha256 "421c04c79859f06a8fd0494d6f6b7a122e40eab071bbf5612ab52dafa24dcc28"

@@ -15,11 +15,7 @@
     {
       "name": "dts",
       "description": "Data Tool Suite - LLM-observable workflows for dbt projects with query execution and interpretation",
-      "source": {
-        "source": "github",
-        "repo": "Big-Time-Data/data-tools",
-        "path": "dts-backend/claude-plugin"
-      }
+      "source": "./plugins/dts"
     }
   ]
 }

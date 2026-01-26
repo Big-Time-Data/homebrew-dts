@@ -1,0 +1,55 @@
+{
+  "name": "dts",
+  "description": "Data Tool Suite - LLM-observable workflows for dbt projects including query execution, interpretation, and annotation handling.",
+  "version": "2.0.3",
+  "author": {
+    "name": "Alex Dovenmuehle",
+    "url": "https://github.com/adoven"
+  },
+  "repository": "https://github.com/Big-Time-Data/data-tools",
+  "license": "MIT",
+  "keywords": ["dbt", "data-engineering", "observability", "llm", "dts"],
+  "commands": "./commands/",
+  "skills": "./skills/",
+  "mcpServers": {
+    "dts": {
+      "command": "dts_mcp",
+      "args": []
+    }
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "dts_mcp prime"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "dts_mcp session-end"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "mcp__plugin_dts_dts__*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "dts_mcp inject-session"
+          }
+        ]
+      }
+    ]
+  }
+}
