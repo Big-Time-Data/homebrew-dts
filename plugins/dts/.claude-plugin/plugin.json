@@ -1,7 +1,7 @@
 {
   "name": "dts",
   "description": "Data Tool Suite - LLM-observable workflows for dbt projects including query execution, interpretation, and annotation handling.",
-  "version": "2.0.3",
+  "version": "2.0.10",
   "author": {
     "name": "Alex Dovenmuehle",
     "url": "https://github.com/adoven"

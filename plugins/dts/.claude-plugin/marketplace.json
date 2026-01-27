@@ -1,0 +1,21 @@
+{
+  "name": "dts-marketplace",
+  "owner": {
+    "name": "Big Time Data",
+    "email": "contact@bigtimedata.com"
+  },
+  "metadata": {
+    "description": "DTS (Data Tool Suite) plugins for dbt project management and LLM-observable data workflows",
+    "version": "1.0.0",
+    "tags": ["dbt", "data-engineering", "observability", "mcp"],
+    "repository": "https://github.com/Big-Time-Data/data-tools",
+    "documentation": "https://github.com/Big-Time-Data/data-tools/blob/main/dts-backend/claude-plugin/README.md"
+  },
+  "plugins": [
+    {
+      "name": "dts",
+      "description": "Data Tool Suite - LLM-observable workflows for dbt projects with query execution and interpretation",
+      "source": "./"
+    }
+  ]
+}
