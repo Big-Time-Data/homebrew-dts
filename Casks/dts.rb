@@ -3,7 +3,7 @@ cask "dts" do
   name "dts"
   desc "Data Tool Suite - Web IDE and MCP server for dbt projects"
   homepage "https://bigtimedata.io/"
-  version "2.2.0-new-ui.1"
+  version "2.5.0-new-ui.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,19 +12,9 @@ cask "dts" do
   binary "dts"
   binary "dts_mcp"
 
-  postflight do
-    # Remove quarantine attribute from binaries
-    system_command "/usr/bin/xattr",
-                   args: ["-d", "com.apple.quarantine", "#{staged_path}/dts"],
-                   sudo: false
-    system_command "/usr/bin/xattr",
-                   args: ["-d", "com.apple.quarantine", "#{staged_path}/dts_mcp"],
-                   sudo: false
-  end
-
   on_macos do
     url "https://github.com/Big-Time-Data/homebrew-dts/releases/download/v#{version}/dts_darwin_all.tar.gz"
-    sha256 "421c04c79859f06a8fd0494d6f6b7a122e40eab071bbf5612ab52dafa24dcc28"
+    sha256 "816d049aa61a0954a44c773fa7bf0ee8e01a18a15000f81374eb69f2067890f7"
   end
 
   caveats do
