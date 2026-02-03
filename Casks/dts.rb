@@ -3,7 +3,7 @@ cask "dts" do
   name "dts"
   desc "Data Tool Suite - Web IDE and MCP server for dbt projects"
   homepage "https://bigtimedata.io/"
-  version "2.8.0"
+  version "2.9.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,7 +14,7 @@ cask "dts" do
 
   on_macos do
     url "https://github.com/Big-Time-Data/homebrew-dts/releases/download/v#{version}/dts_darwin_all.tar.gz"
-    sha256 "93cb771d23caa419261c229c94469bc2fd68e034f8b02d995f36727bdc7e1171"
+    sha256 "661df5cfde7a6dcf37b938a97d488d6aa1678f753419adc2f5c8d01db79b32fd"
   end
 
   caveats do
