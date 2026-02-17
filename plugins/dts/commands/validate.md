@@ -11,7 +11,7 @@ Validate data against expectations, a reference CSV file, or another table (typi
 
 - **\<model\>**: The model or table to validate (e.g., `orders`, `dev.customers`)
 - **against \<source\>**: What to validate against (see Validation Types below)
-- **--issue**: Link this workflow to a beads/issue tracker ID (e.g., `data-tools-123`).
+- **--issue**: Link this workflow to an issue tracker ID (e.g., `data-tools-123`).
   When provided, all observer calls include this reference for traceability.
 
 ## Environment

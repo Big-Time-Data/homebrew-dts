@@ -12,7 +12,7 @@ A richer version of `/query` designed for open-ended data exploration. Automatic
 - **$ARGUMENTS**: The model name, topic, or question to explore
 - **--deep**: Include full lineage analysis and related models
 - **--quality**: Run comprehensive data quality checks
-- **--issue**: Link this workflow to a beads/issue tracker ID (e.g., `data-tools-123`).
+- **--issue**: Link this workflow to an issue tracker ID (e.g., `data-tools-123`).
   When provided, all observer calls include this reference for traceability.
 
 ## Environment

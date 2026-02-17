@@ -74,7 +74,7 @@ See [references/ENVIRONMENTS.md](references/ENVIRONMENTS.md) for detailed patter
 
 ## Issue Context
 
-When working on a tracked issue (GitHub, Linear, Jira, beads, etc.), include the issue reference for traceability.
+When working on a tracked issue (GitHub, Linear, Jira, etc.), include the issue reference for traceability.
 
 ### Detecting Issue Reference
 
@@ -251,7 +251,7 @@ db_interpret(
     }
   ],
   tags: ["orders:trend", "viz:line"],
-  issue_ref: "data-tools-yf9"  # Include if working on a tracked issue (GitHub, Linear, beads, etc.)
+  issue_ref: "data-tools-yf9"  # Include if working on a tracked issue (GitHub, Linear, etc.)
 )
 ```
 

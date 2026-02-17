@@ -10,7 +10,7 @@ Execute a complete query workflow with LLM observability. This command orchestra
 ## Arguments
 
 - **$ARGUMENTS**: The model name, topic, or question to investigate
-- **--issue**: Link this workflow to a beads/issue tracker ID (e.g., `data-tools-123`).
+- **--issue**: Link this workflow to an issue tracker ID (e.g., `data-tools-123`).
   When provided, all observer calls include this reference for traceability.
 
 ## Environment
