@@ -15,7 +15,7 @@ brew install --cask Big-Time-Data/dts/dts
 ## What's Included
 
 - **dts_server** (aliased as `dts`): Web IDE server with embedded React frontend
-- **dts_mcp**: MCP server for Claude Code integration
+- **dts_mcp**: standalone MCP server and Claude Code hooks
 
 ## Quick Start
 
@@ -26,20 +26,14 @@ dts
 ```
 
 Then open http://localhost:8080 in your browser.
+To use a different port, run `dts --port <port>`.
 
-### Claude Plugin Setup
+### Claude Code Integration
 
-After installing DTS, set up the Claude Code plugin:
+The web IDE loads the DTS Claude Code plugin automatically.
+You do not need to install a plugin from a marketplace.
 
-```bash
-# Add the marketplace
-claude plugin marketplace add Big-Time-Data/homebrew-dts
-
-# Install the plugin
-claude plugin install dts@dts-marketplace
-```
-
-This enables Claude Code to interact with your dbt projects through MCP tools.
+To start the MCP server yourself, use `dts --mcp` or `dts_mcp`.
 
 ## Legacy CLI (v0.18.x)
 
