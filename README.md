@@ -26,6 +26,7 @@ dts
 ```
 
 Then open http://localhost:8080 in your browser.
+To use a different port, run `dts --port <port>`.
 
 ### Claude Code Integration
 
